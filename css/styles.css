@@ -1,0 +1,52 @@
+
+
+  .flex-ctr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  body {
+    margin: center;
+    font-family: Helvetica;
+  }
+
+.layout {
+    width: 190vh;
+    height: 100vh;
+
+  display: grid;
+  grid:
+    "header header header" 0.1fr
+    "leftSide body rightSide" 1fr
+    "footer footer footer" 0.3fr
+    / 0.7fr 1fr 0.7fr;
+  gap: 4px;
+  margin: auto;
+}
+
+.header {
+  grid-area: header;
+  background-color: red;
+  opacity: 20%;
+}
+.leftSide {
+  grid-area: leftSide;
+  background-color: rgb(4, 0, 255);
+  opacity: 20%;
+}
+.body {
+  grid-area: body;
+  background-color: black;
+  opacity: 20%;
+}
+.rightSide {
+  grid-area: rightSide;
+  background-color: green;
+  opacity: 20%;
+}
+.footer {
+  grid-area: footer;
+  background-color: rgb(0, 162, 255);
+  opacity: 20%;
+}
