@@ -10,4 +10,4 @@
 9. Render title to screen. 
 10. Increase features. Instead of matching numbers, implement even/odd, 1-12, 2-12, 3-12, and win/loss tally. 
 
-Roulette WireFrame.png
+![Roulette WireFrame](https://user-images.githubusercontent.com/97140818/159081476-7cf9a682-633e-432c-bc26-5ed93627c4bd.png)
