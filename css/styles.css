@@ -11,8 +11,15 @@
     font-family: Helvetica;
   }
 
+  body {
+    background-image: url("https://images.theconversation.com/files/200395/original/file-20171221-15899-nfaxlg.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1356&h=668&fit=crop");
+    opacity: 0.5;
+       }
+img {
+    opacity: 0.5;
+}
 .layout {
-    width: 190vh;
+    width: 120vh;
     height: 100vh;
 
   display: grid;
