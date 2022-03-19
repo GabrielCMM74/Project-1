@@ -98,6 +98,7 @@ body {
 }
 .footer {
   grid-area: footer;
+  height: 100px;
   background-color: rgb(0, 162, 255);
   opacity: 80%;
 }
