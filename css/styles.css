@@ -108,15 +108,18 @@ body {
   grid-row-gap: 0px;
 }
 
-.div1 {
-  grid-area: body;
+.random-number {
+  display: flex;
+  align-items: center;
+  color: goldenrod;
   height: 290px;
   width: 300px;
   margin: auto;
   background-color: rgb(185, 26, 26);
   border-radius: 50%;
-
-  opacity: 90%;
+  text-align: center;
+  font-size: 180px;
+  
 }
 .div2 {
   display: flex;
