@@ -79,7 +79,9 @@ function getNumber(){
     let wheelValue = (Math.floor(Math.random() * 36 + 1));
     wheelResult.innerHTML = wheelValue;
     if (currentSelection.includes(wheelValue)){
-        
+        statusmessage.innerHTML = 'WINNER HAS BEEN DECLARED BRING THY MONEY!'
+    } else {
+        statusmessage.innerHTML = `I'm sorry the odds did not suit you this time...`
     }
 };
 
@@ -87,27 +89,24 @@ function getNumber(){
 
 /////// 1-12 SCENARIOS/////////
 function winFirst12(e){
-    currentSelection = ifFirst12
-    statusmessage.innerHTML = `Heyyyyy you won through First 12!!!`
-};
+    currentSelection = ifFirst12};
 
 function winSecond12(e){
-    currentSelection = ifSecond12
-    statusmessage.innerHTML = `Heyyyyy you won through Second 12!!!`
-};
+   currentSelection = ifSecond12};
+
 function winThird12(e){
-    currentSelection = ifThird12
-    statusmessage.innerHTML = `Heyyyyy you won through Third 12!!!`
-};
+     currentSelection = ifThird12};
+
+////// EVEN / ODD SCENARIOS//////
 
 
 
 function reset(){
     init();
-    if (currentSelection){
+    
 
         currentSelection = undefined;
-    }
+   
 };
 
 function render(){
