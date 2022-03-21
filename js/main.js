@@ -62,11 +62,22 @@ function adjustBalance(){
 
 
 function getNumber(){
-    let wheelValue = (Math.floor(Math.random() * 36 + 1));
+    // let wheelValue  =setInterval(()=>{
+    //     wheelResult.style.visibility = "visible";
+    //     wheelResult.innerHTML = Math.floor((Math.random() * 36) + 1);
+    //     }, 500)
+       let wheelValue = (Math.floor(Math.random() * 36 + 1));
     wheelResult.innerHTML = wheelValue;
     console.log(`YOU WON`)
+    // function time(){
+    //     setTimeout(()=>{
+    //         winner();
+    //     }, 12000)
+    // }
+    // time();
 };
-getNumber()
+
+
 
 function reset(){
     init();
