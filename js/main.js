@@ -27,12 +27,12 @@ let wheelResult = document.getElementById('wheel')
 // Event Listeners
 document.getElementById('placebet').addEventListener('click', adjustBalance)
 document.querySelector('.angry-grid').addEventListener('click', handleClick);
-document.getElementById('placebet').addEventListener('click', handleClick);
-document.querySelector('.angry-grid').addEventListener('click', handleClick);
 resetGame.addEventListener('click', handleClick);
 spinwheel.addEventListener('click', getNumber);
 resetGame.addEventListener('click', reset);
-
+document.getElementById('First-12').addEventListener('click', winFirst12)
+document.getElementById('Second-12').addEventListener('click', winSecond12)
+document.getElementById('Third-12').addEventListener('click', winThird12)
 
 init();
 
@@ -55,15 +55,15 @@ function adjustBalance(){
         if (currentBalance === 0){
             statusmessage.style.color = 'gold';
             statusmessage.style.backgroundColor = 'black'
-            statusmessage.innerHTML = `You're out of money!`;
+            statusmessage.innerHTML = `You're out of money yikes!`;
         }else if (parseInt(enterbet.value) > parseInt(currentBalance)){
             statusmessage.style.color = 'gold';
             statusmessage.style.backgroundColor = 'black'
-            statusmessage.innerHTML = `You don't have enough money to make that wager again!`
+            statusmessage.innerHTML = `You don't have enough money to bet $${enterbet.value} again, may the odds be in your favor!`
         }else{
             statusmessage.style.color = 'gold';
             statusmessage.style.backgroundColor = 'black'
-            statusmessage.innerHTML = `You have bet $${enterbet.value}! Choose a number!`
+            statusmessage.innerHTML = `You have bet $${enterbet.value}! Place your odds!`
         }
         render();
     }
@@ -76,38 +76,36 @@ function adjustBalance(){
 
 
 function getNumber(){
-    // let wheelValue  =setInterval(()=>{
-    //     wheelResult.style.visibility = "visible";
-    //     wheelResult.innerHTML = Math.floor((Math.random() * 36) + 1);
-    //     }, 500)
-       let wheelValue = (Math.floor(Math.random() * 36 + 1));
+    let wheelValue = (Math.floor(Math.random() * 36 + 1));
     wheelResult.innerHTML = wheelValue;
-    console.log(`YOU WON`)
-
-    return wheelValue
-    // function time(){
-    //     setTimeout(()=>{
-    //         winner();
-    //     }, 12000)
-    // }
-    // time();console.log(getNumber())
-    
+    if (currentSelection.includes(wheelValue)){
+        
+    }
 };
 
+/////////////// WIN SCENARIOS/////////////
 
+/////// 1-12 SCENARIOS/////////
+function winFirst12(e){
+    currentSelection = ifFirst12
+    statusmessage.innerHTML = `Heyyyyy you won through First 12!!!`
+};
 
+function winSecond12(e){
+    currentSelection = ifSecond12
+    statusmessage.innerHTML = `Heyyyyy you won through Second 12!!!`
+};
+function winThird12(e){
+    currentSelection = ifThird12
+    statusmessage.innerHTML = `Heyyyyy you won through Third 12!!!`
+};
 
-// function fask(){
- 
-//     const win = getNumber()
-//     if (win === evenarray)
-// };
 
 
 function reset(){
     init();
     if (currentSelection){
-        currentSelection.style.border = 'none';
+
         currentSelection = undefined;
     }
 };
@@ -116,13 +114,6 @@ function render(){
     balancemessage.innerHTML = currentBalance;
 };
 render()
-
-// function render(){
-//     balancemessage.innerHTML = currentBalance + enterbet.value;
-// // };
-
-// render()
-
 
 function handleClick(e){
     console.log(e.target)
