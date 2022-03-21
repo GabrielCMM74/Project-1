@@ -6,8 +6,15 @@ let currentBet;
 let currentSelection;
 let currentWinner;
 
+let resetGame = document.getElementById('resetwheel');
+let spinWheel = document.getElementById('spinwheel');
+
 // Event Listeners
 document.querySelector('.angry-grid').addEventListener('click', handleClick);
+document.getElementById('placebet').addEventListener('click', handleClick);
+document.querySelector('.angry-grid').addEventListener('click', handleClick);
+resetGame.addEventListener('click', handleClick);
+spinWheel.addEventListener('click', handleClick);
 
 
 // init();
