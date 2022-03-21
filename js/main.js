@@ -11,6 +11,7 @@ let spinBtn = document.getElementById('spinwheel');
 let wheelResult = document.getElementById('wheel')
 
 // Event Listeners
+document.getElementById('placebet').addEventListener('click', adjustBalance)
 document.querySelector('.angry-grid').addEventListener('click', handleClick);
 document.getElementById('placebet').addEventListener('click', handleClick);
 document.querySelector('.angry-grid').addEventListener('click', handleClick);
