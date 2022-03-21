@@ -33,6 +33,8 @@ resetGame.addEventListener('click', reset);
 document.getElementById('First-12').addEventListener('click', winFirst12)
 document.getElementById('Second-12').addEventListener('click', winSecond12)
 document.getElementById('Third-12').addEventListener('click', winThird12)
+document.getElementById('Even-W').addEventListener('click', winEven)
+document.getElementById('Odd-W').addEventListener('click', winOdd)
 
 init();
 
@@ -99,8 +101,21 @@ function winThird12(e){
 
 ////// EVEN / ODD SCENARIOS//////
 
+function winEven(e){
+    currentSelection = ifEven};
 
+function winOdd(e){
+    currentSelection = ifOdd};
 
+////////// RED / BLACK SCENARIOS////////
+
+function winRed(e){
+    currentSelection = ifRed};
+
+function winBlack(e){
+    currentSelection = ifBlack};
+
+/////// 1-18 19-36 SCENARIOS///////
 function reset(){
     init();
     
