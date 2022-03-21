@@ -21,10 +21,21 @@
     <div class="bg_img">
         <section class="layout">
             <div class="header flex-ctr">Welcome to Casino Roulette!</div>
-            <div class="leftSide flex-ctr">2</div>
+            <div class="leftSide flex-ctr">
+
+        
+                <div class="bet-square">Current bet:<input type="number" id="enterbet"></input></div>
+
+                    <div id="balance">Current Balance: $<span id="balancemessage"></span></div>
+
+
+            </div>
             <div class="body  ">
                 <div class="div1 flex-top"> </div>
-                <div class="div2 flex-bot"> </div>
+                <div class="div2 flex-bot">
+                    <button id="spinwheel" class="btn btn-success btn-lg">Spin!</button>
+                    <button id="placebet" class="btn btn-warning">Place Bet</button>
+                    <button id="resetwheel" class="btn btn-danger">Reset</button> </div>
             </div>
 
             <div class="rightSide "><div class="angry-grid">
@@ -93,7 +104,8 @@
                 
                 <div class="item-54"></div>
               </div></div>
-            <div class="footer flex-ctr">5</div>
+            <div class="footer flex-ctr">
+                <span id="statusmessage">Place your bet!!!</span>            </div>
         </section>
     </div>
 </body>
