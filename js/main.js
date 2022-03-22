@@ -16,7 +16,7 @@ let ifThirdRow = [3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36];
 
 // State Variables 
 let currentBalance;
-let currentBet;
+let currentBet = enterbet.value
 let currentSelection;
 let currentWinner;
 let resetGame = document.getElementById('resetwheel');
@@ -63,7 +63,7 @@ function adjustBalance(){
             statusmessage.style.color = 'gold';
             statusmessage.style.backgroundColor = 'black'
             statusmessage.innerHTML = `You don't have enough money to bet $${enterbet.value} again, may the odds be in your favor!`
-        }else{
+        } else{
             statusmessage.style.color = 'gold';
             statusmessage.style.backgroundColor = 'black'
             statusmessage.innerHTML = `You have bet $${enterbet.value}! Place your odds!`
@@ -81,6 +81,9 @@ function getNumber(){
     wheelResult.innerHTML = wheelValue;
     if (currentSelection.includes(wheelValue)){
         statusmessage.innerHTML = 'WINNER HAS BEEN DECLARED BRING THY MONEY!'
+        let betVal = currentBet
+        let winnings =  Number(betVal) + Number(currentBalance)
+        balancemessage.innerHTML = winnings
     } else {
         statusmessage.innerHTML = `I'm sorry the odds did not suit you this time...`
     }
@@ -139,7 +142,7 @@ function reset(){
 };
 
 function render(){
-    balancemessage.innerHTML = currentBalance;
+    balancemessage.innerHTML = currentBalance
 };
 render()
 
