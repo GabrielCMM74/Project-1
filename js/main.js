@@ -15,7 +15,8 @@ let ifSecondRow = [2, 5, 8, 11, 14, 17, 20, 23, 26, 29, 32, 35];
 let ifThirdRow = [3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36];
 
 // State Variables 
-
+const crowdWow = new Audio('sounds/sounds_crowdWow.wav');
+const loss = new Audio('sounds/sounds_loss.wav');
 let currentBalance;
 let currentBet = enterbet.value
 let currentSelection;
@@ -96,14 +97,24 @@ function getNumber(){
         let winnings = parseInt(currentBalance) + parseInt(enterbet.value) * 2
         currentBalance = winnings
         balancemessage.innerHTML = winnings
+        crowdWow.play();
+        console.log(crowdWow)
         console.log(enterbet.value)
         console.log(currentBalance)
         console.log(winnings)
          } else {
         statusmessage.innerHTML = `I'm sorry the odds did not suit you this time...`
+        loss.play();
+        console.log(loss)
     }
 }
 
+// if (winnings > 0) {
+//     crowdWow.play();
+// } else {
+//     loss.play();
+// }
+// };
 /////////////// WIN SCENARIOS/////////////
 /////// 1-12 SCENARIOS/////////
 function winFirst12(e){
