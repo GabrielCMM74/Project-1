@@ -1,6 +1,6 @@
 console.log(`Main JS File is Loaded`)
 
-// All my Arrays 
+// All of my Arrays 
 let ifEven = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36];
 let ifOdd = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35];
 let ifRed = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35];
@@ -43,19 +43,14 @@ document.getElementById('SecondRow').addEventListener('click', winSecondRow)
 document.getElementById('ThirdRow').addEventListener('click', winThirdRow)
 
 init();
-
 function init(){
     currentBalance = 5000;
     currentBet = enterbet.value;
     statusmessage.innerHTML = `Place your bets!!!`;
-    statusmessage.style.backgroundColor = 'black';
-    statusmessage.style.color = 'gold';
     enterbet.value = '';
     wheelResult.innerHTML = '';
     render();
 };
-
-
 
 function adjustBalance(){
     if (currentBalance > 0 && currentBalance >= parseInt(enterbet.value)){
@@ -81,8 +76,6 @@ function adjustBalance(){
     }
 };
 
-
-
 function getNumber(){
     let wheelValue = (Math.floor(Math.random() * 36 + 1));
     wheelResult.innerHTML = wheelValue;
@@ -92,9 +85,7 @@ function getNumber(){
         statusmessage.innerHTML = `I'm sorry the odds did not suit you this time...`
     }
 };
-
 /////////////// WIN SCENARIOS/////////////
-
 /////// 1-12 SCENARIOS/////////
 function winFirst12(e){
 currentSelection = ifFirst12};
@@ -141,7 +132,6 @@ function winThirdRow(e){
 currentSelection = ifThirdRow};
 
 ////////////// Numbers //////////
-
 
 function reset(){
     init();
