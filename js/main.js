@@ -71,7 +71,7 @@ function adjustBalance(){
         render();
     }
     if (currentSelection){
-        currentSelection.style.border = 'none';
+        
         currentSelection = undefined;
     }
 };
@@ -81,10 +81,12 @@ function getNumber(){
     wheelResult.innerHTML = wheelValue;
     if (currentSelection.includes(wheelValue)){
         statusmessage.innerHTML = 'WINNER HAS BEEN DECLARED BRING THY MONEY!'
-        let betVal = currentBet
-        let winnings =  Number(betVal) + Number(currentBalance)
+        let winnings = parseInt(currentBalance) + parseInt(enterbet.value) * 2
         balancemessage.innerHTML = winnings
-    } else {
+        console.log(enterbet.value)
+        console.log(currentBalance)
+        console.log(winnings)
+         } else {
         statusmessage.innerHTML = `I'm sorry the odds did not suit you this time...`
     }
 };
