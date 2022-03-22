@@ -19,7 +19,6 @@ let currentBalance;
 let currentBet;
 let currentSelection;
 let currentWinner;
-
 let resetGame = document.getElementById('resetwheel');
 let spinBtn = document.getElementById('spinwheel');
 let wheelResult = document.getElementById('wheel')
@@ -39,6 +38,9 @@ document.getElementById('Black-W').addEventListener('click', winBlack)
 document.getElementById('Red-W').addEventListener('click', winRed)
 document.getElementById('OneEight-W').addEventListener('click', winOneEighteen)
 document.getElementById('NineThirty-W').addEventListener('click', winNineThirtySix)
+document.getElementById('FirstRow').addEventListener('click', winFirstRow)
+document.getElementById('SecondRow').addEventListener('click', winSecondRow)
+document.getElementById('ThirdRow').addEventListener('click', winThirdRow)
 
 init();
 
@@ -143,10 +145,7 @@ currentSelection = ifThirdRow};
 
 function reset(){
     init();
-    
-
-        currentSelection = undefined;
-   
+    currentSelection = undefined;
 };
 
 function render(){
@@ -158,4 +157,3 @@ function handleClick(e){
     console.log(e.target)
 }
 
-// statusmessage.innerHTML = `Hello`

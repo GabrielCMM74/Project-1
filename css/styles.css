@@ -93,11 +93,7 @@ body {
 }
 .body {
   grid-area: body;
-
-  background-color: black;
   border-radius: 50%;
-
-  opacity: 90%;
 }
 
 .parent {
@@ -115,10 +111,13 @@ body {
   height: 290px;
   width: 300px;
   margin: auto;
+  margin-top: 150px;
+  margin-bottom: -110px;
   background-color: rgb(185, 26, 26);
   border-radius: 50%;
   text-align: center;
   font-size: 180px;
+  opacity: 90%;
   
 }
 .div2 {
@@ -131,15 +130,12 @@ body {
   height: 300px;
   width: 500px;
   margin: auto;
-  background-color: rgb(48, 51, 184);
   border-radius: 50%;
-
-  opacity: 90%;
 }
 #spinwheel{
   display: flex;
   margin-bottom: -1vh;
-  margin-left: 20vh;
+  margin-left: 20.2vh;
   width: 150px;
   justify-content: center;
   padding: 10px;
@@ -156,7 +152,7 @@ body {
 #placebet{
   display: flex;
   margin-bottom: -1vh;
-  margin-left: 21vh;
+  margin-left: 21.2vh;
   width: 130px;
   justify-content: center;
   padding: 7px;
@@ -173,7 +169,7 @@ body {
 #resetwheel{
   display: flex;
   margin-bottom: -1vh;
-  margin-left: 22.5vh;
+  margin-left: 22.7vh;
   width: 105px;
   justify-content: center;
   padding: 8px;
@@ -1096,7 +1092,7 @@ body {
 
 
 
-/* .first-12:hover ~.first-12{
+ .first-12:hover ~.first-12{
   background-color: rgb(48, 51, 184);
 }
 .first-12:hover{
@@ -1175,16 +1171,15 @@ body {
 }
 .snd-thir:hover{
   background-color: rgb(120, 118, 245);
-}
-
+} 
 .thir-thir:hover ~.thir-thir{
   background-color: rgb(118, 245, 160);
-}
+} 
 .thir-thir:hover{
   background-color: rgb(118, 245, 160);
-} */
+} 
 
-.number:hover{
+#NumOne:hover > div{
   background-color: gold;
 }
 
