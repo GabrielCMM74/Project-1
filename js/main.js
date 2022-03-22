@@ -15,6 +15,7 @@ let ifSecondRow = [2, 5, 8, 11, 14, 17, 20, 23, 26, 29, 32, 35];
 let ifThirdRow = [3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36];
 
 // State Variables 
+
 let currentBalance;
 let currentBet = enterbet.value
 let currentSelection;
@@ -70,10 +71,10 @@ function adjustBalance(){
         }
         render();
     }
-    if (currentSelection){
+    // if (currentSelection){
         
-        currentSelection = undefined;
-    }
+    //     currentSelection = undefined;
+    // }
 };
 
 function getNumber(){
@@ -82,6 +83,7 @@ function getNumber(){
     if (currentSelection.includes(wheelValue)){
         statusmessage.innerHTML = 'WINNER HAS BEEN DECLARED BRING THY MONEY!'
         let winnings = parseInt(currentBalance) + parseInt(enterbet.value) * 2
+        currentBalance = winnings
         balancemessage.innerHTML = winnings
         console.log(enterbet.value)
         console.log(currentBalance)
@@ -89,7 +91,8 @@ function getNumber(){
          } else {
         statusmessage.innerHTML = `I'm sorry the odds did not suit you this time...`
     }
-};
+}
+
 /////////////// WIN SCENARIOS/////////////
 /////// 1-12 SCENARIOS/////////
 function winFirst12(e){
@@ -144,8 +147,9 @@ function reset(){
 };
 
 function render(){
+    
     balancemessage.innerHTML = currentBalance
-};
+}
 render()
 
 function handleClick(e){
