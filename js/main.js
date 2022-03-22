@@ -43,6 +43,17 @@ document.getElementById('FirstRow').addEventListener('click', winFirstRow)
 document.getElementById('SecondRow').addEventListener('click', winSecondRow)
 document.getElementById('ThirdRow').addEventListener('click', winThirdRow)
 
+// let targets = document.querySelectorAll(".number")
+// targets.forEach(targets => {target.addEventListener("mouseover", mOver})
+// // targets.forEach( => target.addEventListener("mouseover", mOver, false))
+// // targets.addEventListener("mouseout", mOut, false)
+
+// function mOver(){
+//     target.setAttribute("style", "background-color:blue;")
+// }
+
+
+
 init();
 function init(){
     currentBalance = 5000;

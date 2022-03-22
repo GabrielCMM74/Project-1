@@ -23,8 +23,9 @@ body {
 .bg_img {
   background-image: url("https://images5.alphacoders.com/431/431809.jpg");
   background-repeat: no-repeat;
-  height: 100%;
-  background-position: center;
+  height: 120vh;
+  width: 100%;
+  
   background-size: cover;
 }
 
@@ -1001,8 +1002,11 @@ border: 2px solid rgb(7, 6, 6)
   font-size: 40px;
   background-color: rgb(0, 0, 0);
   color: gold;
-  width: auto;
+  width: auto; 
 }
+
+
+
 .first-12:hover ~.first-12{
   background-color: rgb(48, 51, 184);
 }
@@ -1041,19 +1045,19 @@ border: 2px solid rgb(7, 6, 6)
 }
 
 .black:hover ~.black{
-  opacity: .6;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .black:hover{
-  opacity: .6;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .red:hover ~.red{
-  opacity: .2;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .red:hover{
-  opacity: .2;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .one-eigh:hover ~.one-eigh{
@@ -1090,8 +1094,8 @@ border: 2px solid rgb(7, 6, 6)
   background-color: rgb(118, 245, 160);
 } 
 
-#NumOne:hover > div{
-  background-color: gold;
+.number:hover ~.number  {
+  background-color: rgb(252, 252, 252)  !important;
 }
 
 
