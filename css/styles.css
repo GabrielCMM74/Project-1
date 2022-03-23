@@ -46,7 +46,7 @@ body {
 .header {
   grid-area: header;
   display: flex;
-  margin-top: 3vh;
+  margin-top: 1vh;
   color: gold;
   background-color: black;
   opacity: 90%;
@@ -94,6 +94,7 @@ body {
   bottom: 15vh;
 }
 .body {
+  margin-top: -80px;
   grid-area: body;
   border-radius: 50%;
 }
@@ -996,6 +997,7 @@ border: 2px solid rgb(7, 6, 6)
   grid-area: footer;
   align-items: flex-start;
   height: 100px;
+  margin-bottom: 25px;
   opacity: 80%;
 }
 #statusmessage {

@@ -1,6 +1,4 @@
-console.log(`Main JS File is Loaded`)
-
-// All of my Arrays 
+// All of my Arrays for comparing selction and winning number
 let ifEven = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36];
 let ifOdd = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35];
 let ifRed = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35];
@@ -14,24 +12,24 @@ let ifFirstRow = [1, 4, 7, 10, 13, 16, 19, 22, 25, 28, 31, 34];
 let ifSecondRow = [2, 5, 8, 11, 14, 17, 20, 23, 26, 29, 32, 35];
 let ifThirdRow = [3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36];
 
-// State Variables 
+// Constant Variables
+let resetGame = document.getElementById('resetwheel');
+let spinBtn = document.getElementById('spinwheel');
+let wheelResult = document.getElementById('wheel') 
 const crowdWow = new Audio('sounds/sounds_crowdWow.wav');
 const loss = new Audio('sounds/sounds_loss.wav');
 const spinSound = new Audio('sounds/sounds_spinSound.wav');
-let currentBalance;
 let currentBet = enterbet.value
+
+// State Variables 
+let currentBalance;
 let currentSelection;
 let currentWinner;
-let resetGame = document.getElementById('resetwheel');
-let spinBtn = document.getElementById('spinwheel');
-let wheelResult = document.getElementById('wheel')
 
 // Event Listeners
-document.getElementById('placebet').addEventListener('click', adjustBalance)
-document.querySelector('.angry-grid').addEventListener('click', handleClick);
-resetGame.addEventListener('click', handleClick);
 spinwheel.addEventListener('click', getNumber);
 resetGame.addEventListener('click', reset);
+document.getElementById('placebet').addEventListener('click', adjustBalance)
 document.getElementById('First-12').addEventListener('click', winFirst12)
 document.getElementById('Second-12').addEventListener('click', winSecond12)
 document.getElementById('Third-12').addEventListener('click', winThird12)
@@ -45,17 +43,8 @@ document.getElementById('FirstRow').addEventListener('click', winFirstRow)
 document.getElementById('SecondRow').addEventListener('click', winSecondRow)
 document.getElementById('ThirdRow').addEventListener('click', winThirdRow)
 
-// let targets = document.querySelectorAll(".number")
-// targets.forEach(targets => {target.addEventListener("mouseover", mOver})
-// // targets.forEach( => target.addEventListener("mouseover", mOver, false))
-// // targets.addEventListener("mouseout", mOut, false)
 
-// function mOver(){
-//     target.setAttribute("style", "background-color:blue;")
-// }
-
-
-
+// Start Fucntion Resets Manipulated elements
 init();
 function init(){
     currentBalance = 5000;
@@ -66,6 +55,7 @@ function init(){
     render();
 };
 
+// Adjusts balance based on place bet button and entered value
 function adjustBalance(){
     if (currentBalance > 0 && currentBalance >= parseInt(enterbet.value)){
         currentBalance -= parseInt(enterbet.value);
@@ -80,16 +70,13 @@ function adjustBalance(){
         } else{
             statusmessage.style.color = 'gold';
             statusmessage.style.backgroundColor = 'black'
-            statusmessage.innerHTML = `You have bet $${enterbet.value}! Place your odds!`
+            statusmessage.innerHTML = `You have bet $${enterbet.value}! Select your Wager on the board!`
         }
         render();
     }
-    // if (currentSelection){
-        
-    //     currentSelection = undefined;
-    // }
 };
 
+// Randomizes winning number. Parameter for winning/losing
 function getNumber(){
     let wheelValue = (Math.floor(Math.random() * 36 + 1));
     wheelResult.innerHTML = wheelValue;
@@ -100,24 +87,13 @@ function getNumber(){
         currentBalance = winnings
         balancemessage.innerHTML = winnings
         crowdWow.play();
-        console.log(crowdWow)
-        console.log(enterbet.value)
-        console.log(currentBalance)
-        console.log(winnings)
          } else {
         statusmessage.innerHTML = `I'm sorry the odds did not suit you this time...`
         loss.play();
-        console.log(loss)
     }
 }
-
-// if (winnings > 0) {
-//     crowdWow.play();
-// } else {
-//     loss.play();
-// }
-// };
 /////////////// WIN SCENARIOS/////////////
+
 /////// 1-12 SCENARIOS/////////
 function winFirst12(e){
 currentSelection = ifFirst12};
@@ -146,11 +122,11 @@ currentSelection = ifBlack};
 
 /////// 1-18 19-36 SCENARIOS///////
 
-function winNineThirtySix(e){
-currentSelection = ifNinetThirty};
-
 function winOneEighteen(e){
 currentSelection = ifOnetEight};
+
+function winNineThirtySix(e){
+currentSelection = ifNinetThirty};
 
 ////////// ROW SCENARIOS//////////
 
@@ -165,18 +141,18 @@ currentSelection = ifThirdRow};
 
 ////////////// Numbers //////////
 
+// Function to Reset balance and restart game
+
 function reset(){
     init();
     currentSelection = undefined;
 };
 
+// Function that ccorrectly displays balance for winnings/losing/place bet
+
 function render(){
-    
-    balancemessage.innerHTML = currentBalance
+balancemessage.innerHTML = currentBalance
 }
 render()
 
-function handleClick(e){
-    console.log(e.target)
-}
 
