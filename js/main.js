@@ -12,7 +12,7 @@ let ifFirstRow = [1, 4, 7, 10, 13, 16, 19, 22, 25, 28, 31, 34];
 let ifSecondRow = [2, 5, 8, 11, 14, 17, 20, 23, 26, 29, 32, 35];
 let ifThirdRow = [3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36];
 
-// Constant Variables
+// Constant Variables 
 let resetGame = document.getElementById('resetwheel');
 let spinBtn = document.getElementById('spinwheel');
 let wheelResult = document.getElementById('wheel') 
@@ -20,7 +20,6 @@ let currentBet = enterbet.value
 const crowdWow = new Audio('sounds/sounds_crowdWow.wav');
 const loss = new Audio('sounds/sounds_loss.wav');
 const spinSound = new Audio('sounds/sounds_spinSound.wav');
-
 
 // State Variables 
 let currentBalance;
@@ -140,7 +139,7 @@ currentSelection = ifSecondRow};
 function winThirdRow(e){
 currentSelection = ifThirdRow};
 
-////////////// Numbers //////////
+////////////// Numbers /////////////
 
 // Function to Reset balance and restart game
 
