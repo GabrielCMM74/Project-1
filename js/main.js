@@ -17,6 +17,7 @@ let ifThirdRow = [3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36];
 // State Variables 
 const crowdWow = new Audio('sounds/sounds_crowdWow.wav');
 const loss = new Audio('sounds/sounds_loss.wav');
+const spinSound = new Audio('sounds/sounds_spinSound.wav');
 let currentBalance;
 let currentBet = enterbet.value
 let currentSelection;
@@ -92,6 +93,7 @@ function adjustBalance(){
 function getNumber(){
     let wheelValue = (Math.floor(Math.random() * 36 + 1));
     wheelResult.innerHTML = wheelValue;
+    spinSound.play()
     if (currentSelection.includes(wheelValue)){
         statusmessage.innerHTML = 'WINNER HAS BEEN DECLARED BRING THY MONEY!'
         let winnings = parseInt(currentBalance) + parseInt(enterbet.value) * 2
