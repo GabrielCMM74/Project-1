@@ -1004,11 +1004,11 @@ border: 2px solid rgb(7, 6, 6)
 }
 
 .sec-12:hover ~.sec-12{
-  background-color: rgb(180, 62, 19);
+  background-color: rgb(230, 157, 0);
 }
 
 .sec-12:hover{
-  background-color: rgb(180, 62, 19)
+  background-color: rgb(230, 157, 0)
 }
 
 .thir-12:hover ~.thir-12{
@@ -1077,10 +1077,10 @@ border: 2px solid rgb(7, 6, 6)
   background-color: rgb(120, 118, 245);
 } 
 .thir-thir:hover ~.thir-thir{
-  background-color: rgb(118, 245, 160);
+  background-color: rgba(59, 253, 0, 0.37);
 } 
 .thir-thir:hover{
-  background-color: rgb(118, 245, 160);
+  background-color: rgba(59, 253, 0, 0.37);
 } 
 
 .number:hover ~.number  {

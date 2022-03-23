@@ -1,6 +1,7 @@
 #  Bet your odds - Roulette:
 
 ### Place your bet amount and select your wager. 
+<p>How to play: Start by typing the amount you want to bet and hitting the button "place bet". Determine what you would like your wager to be for example - (odd, even, 1st-12, 1st-3rd, red, black, 1-18) Next hit Spin! If the number matches your bet selected you win based off certain odds. Enjoy Roulette.
 
 -Play Roulette here: link
 
