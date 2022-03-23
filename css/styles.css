@@ -195,7 +195,6 @@ body {
   justify-content: space-evenly;
   align-items: center;
 }
-
 .angry-grid {
   display: grid; 
   text-align: center;
@@ -205,7 +204,6 @@ body {
   border: 5px solid goldenrod
   
 }
-
 .angry-grid div {
 border: 2px solid rgb(7, 6, 6) 
 } 
@@ -231,9 +229,6 @@ border: 2px solid rgb(7, 6, 6)
   grid-row-end: 2;
   grid-column-end: 6;
 }
-
-
-
 .item-2 {
   display: flex;
   text-align: center;
@@ -249,7 +244,6 @@ border: 2px solid rgb(7, 6, 6)
   grid-column-end: 4;
   
 }
-
 .item-3 {
   display: flex;
   text-align: center;
@@ -265,9 +259,6 @@ border: 2px solid rgb(7, 6, 6)
   grid-column-end: 3;
   
 }
-
-
-
 .item-4 {
   display: flex;
   text-align: center;
@@ -425,7 +416,6 @@ border: 2px solid rgb(7, 6, 6)
   
 }
 .item-14 {
-
   display: flex;
   text-align: center;
   align-items: center;
@@ -513,7 +503,6 @@ border: 2px solid rgb(7, 6, 6)
   grid-column-start: 3;
   grid-row-end: 8;
   grid-column-end: 4;
-  
 }
 .item-20 {
   display: flex;
@@ -543,7 +532,6 @@ border: 2px solid rgb(7, 6, 6)
   grid-column-start: 5;
   grid-row-end: 8;
   grid-column-end: 6;
-  
 }
 .item-22 {
   display: flex;
@@ -573,7 +561,6 @@ border: 2px solid rgb(7, 6, 6)
   grid-column-start: 3;
   grid-row-end: 9;
   grid-column-end: 4;
-  
 }
 .item-24 {
   display: flex;
@@ -1038,7 +1025,7 @@ border: 2px solid rgb(7, 6, 6)
   background-color: rgb(13, 223, 223);
 }
 
-.odd:hover ~.even{
+.odd:hover ~.odd{
   background-color: rgb(255, 187, 0);
 }
 
