@@ -43,7 +43,6 @@ document.getElementById('FirstRow').addEventListener('click', winFirstRow)
 document.getElementById('SecondRow').addEventListener('click', winSecondRow)
 document.getElementById('ThirdRow').addEventListener('click', winThirdRow)
 
-
 // Start Fucntion Resets Manipulated elements
 init();
 function init(){
@@ -80,13 +79,13 @@ function adjustBalance(){
 function getNumber(){
     let wheelValue = (Math.floor(Math.random() * 36 + 1));
     wheelResult.innerHTML = wheelValue;
-    spinSound.play()
+    // spinSound.play()
     if (currentSelection.includes(wheelValue)){
         statusmessage.innerHTML = 'WINNER HAS BEEN DECLARED BRING THY MONEY!'
         let winnings = parseInt(currentBalance) + parseInt(enterbet.value) * 2
         currentBalance = winnings
         balancemessage.innerHTML = winnings
-        crowdWow.play();
+        // crowdWow.play();
          } else {
         statusmessage.innerHTML = `I'm sorry the odds did not suit you this time...`
         loss.play();

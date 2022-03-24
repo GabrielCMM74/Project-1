@@ -25,14 +25,12 @@ body {
   background-repeat: no-repeat;
   height: 120vh;
   width: 100%;
-  
   background-size: cover;
 }
 
 .layout {
   width: 150vh;
   height: 100vh;
-
   display: grid;
   grid:
     "header header header" 0.1fr
@@ -53,6 +51,7 @@ body {
   font-family: "Alex Brush", cursive;
   font-size: 70px;
 }
+
 .leftSide {
   grid-area: leftSide;
 }
