@@ -12,7 +12,7 @@ let ifFirstRow = [1, 4, 7, 10, 13, 16, 19, 22, 25, 28, 31, 34];
 let ifSecondRow = [2, 5, 8, 11, 14, 17, 20, 23, 26, 29, 32, 35];
 let ifThirdRow = [3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36];
 
-// Constant Variables 
+// Variables 
 let resetGame = document.getElementById('resetwheel');
 let spinBtn = document.getElementById('spinwheel');
 let wheelResult = document.getElementById('wheel') 
@@ -79,7 +79,7 @@ function adjustBalance(){
 function getNumber(){
     let wheelValue = (Math.floor(Math.random() * 36 + 1));
     wheelResult.innerHTML = wheelValue;
-    // spinSound.play()
+    spinSound.play()
     if (currentSelection.includes(wheelValue)){
         statusmessage.innerHTML = 'WINNER HAS BEEN DECLARED BRING THY MONEY!'
         let winnings = parseInt(currentBalance) + parseInt(enterbet.value) * 2
