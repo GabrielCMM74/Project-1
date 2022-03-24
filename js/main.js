@@ -85,7 +85,7 @@ function getNumber(){
         let winnings = parseInt(currentBalance) + parseInt(enterbet.value) * 2
         currentBalance = winnings
         balancemessage.innerHTML = winnings
-        // crowdWow.play();
+        crowdWow.play();
          } else {
         statusmessage.innerHTML = `I'm sorry the odds did not suit you this time...`
         loss.play();
